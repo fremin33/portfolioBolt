@@ -1,0 +1,27 @@
+{% extends 'partials/_master.twig' %} {% block main %}
+
+<div class="grid-container">
+    <div class="grid">
+        {% for key, record in records %}
+        <a href="{{record.link}}">
+            <div class="card-project {{record.framework}}">
+            <img src="{{ record.image|image}}">
+                <div class="titles {% if  key is odd  %} bg-overlay-odd {% else %} bg-overlay-even {% endif %}">
+                    <span>
+                        <h2>{{record.title}}</h2>
+                        <h3>{{record.framework}}</h3>
+                    </span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+
+    {# {% include "partials/_sub_recent_records.twig" %} #} 
+{% endblock main %}

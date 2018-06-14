@@ -1,0 +1,43 @@
+{% extends 'partials/_master.twig' %} {% block main %}
+
+<div class="container-page">
+    <div class="wrap">
+        <h2 class="title-project">
+            <a href="{{record.link_project}}" target="_blank">#{{record.title}}</a>
+        </h2>
+        <div class="div-home-img">
+            <img class="home-img" src="{{ record.home_image|image}}" alt="{{ record.values.image.alt|default() }}" />
+        <a href="{{record.link_project}}" target="_blank">
+        <div class="hover-home">
+                <p class="link-hover-home">Découvrir {{ record.title}}</p>
+                <div class="line"></div>
+            </div>
+        </a>
+        </div>
+        <div class="content-page">
+            <div class="items">
+                <p class="presentation-title">
+                    Le concept
+                </p>
+                {{ record.teaser}}
+            </div>
+            <div class="items">
+                <p class="presentation-title">
+                    Tâches réalisés
+                </p>
+                {{ record.tache }}
+                {#
+                <p>LANGAGES ET FRAMEWORKS</p>
+                {{ record.framework}} #}
+            </div>
+        </div>
+        {{ record.body }}
+    </div>
+</div>
+
+<style>
+</style>
+
+
+{# Before and after #} {# {{ include('partials/_recordfooter.twig', { 'record': record, 'extended': true }) }} #} {% endblock
+main %}

@@ -1,0 +1,36 @@
+pages:
+    name: Pages
+    singular_name: Page
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        framework: 
+            type: select
+            values: [symfony, wordpress, zend, rails, prestashop, slim, javascript]
+        slug:
+            type: slug
+            uses: title
+        image:
+            type: image
+            placeholder: https://source.unsplash.com/1280x768/?business,workplace/__random__
+        link_project:
+            type: text
+        home_image:
+            type: image
+            placeholder: https://source.unsplash.com/1920x640/?cityscape,landscape,nature/__random__
+        teaser:
+            type: html
+            height: 150px*
+        tache:
+            type: html
+            height: 150px
+        body:
+            type: html
+            height: 300px
+        template:
+            type: templateselect
+            filter: '*.twig'
+    taxonomy: [ groups ]
+    recordsperpage: 20
