@@ -8,7 +8,7 @@
 database:
     driver: mysql
     databasename: portfolioBolt
-    username: fremin33
+    username: root
     password: root
 
 # The name of the website
