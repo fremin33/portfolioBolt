@@ -7,8 +7,11 @@ pages:
             class: large
             group: content
         framework: 
+            type: text
+            class: large
+        langage:
             type: select
-            values: [symfony, wordpress, zend, rails, prestashop, slim, javascript]
+            values: [php, ruby, features, javascript]
         slug:
             type: slug
             uses: title

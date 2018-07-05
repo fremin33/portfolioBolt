@@ -4,7 +4,7 @@
     <div class="grid">
         {% for key, record in records %}
         <a href="{{record.link}}">
-            <div class="card-project {{record.framework}}">
+            <div class="card-project {{record.langage}}">
             <img src="{{ record.image|image}}">
                 <div class="titles {% if  key is odd  %} bg-overlay-odd {% else %} bg-overlay-even {% endif %}">
                     <span>

@@ -8,7 +8,12 @@
             </h1>
         </a>
     </div>
+        {% if app.request.get('_route') == "homepage" %}
         {{ menu('first_menu', '/partials/_first_menu_portfolio.twig') }}
+        {% endif %}
+        {% if app.request.get('_route') == "contentlink" %}
+        {{ menu('first_menu', '/partials/_first_menu_portfolio-page.twig') }}
+        {% endif %}
     </div>
 </div>
 {% endif %}
