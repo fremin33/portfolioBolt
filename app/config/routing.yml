@@ -4,12 +4,12 @@
 
 # ------------------------------------------------------------------------------
 # Place your own routes here, that have a HIGHER priority than the default routes.
-page:
+pagebinding:
     path: /{slug}
     defaults:
         _controller: controller.frontend:record
-    requirements:
         contenttypeslug: page
+    contenttype: pages
 
 
 # ------------------------------------------------------------------------------
